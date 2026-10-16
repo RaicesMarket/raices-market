@@ -2,50 +2,231 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Raíces Market</title>
-  <style>
-    body {
-      margin: 0;
-      background: #faf5eb;
-      color: #244536;
-      font-family: Georgia, serif;
-      text-align: center;
-    }
-    header {
-      background: #244536;
-      color: white;
-      padding: 45px 20px;
-    }
-    h1 { font-size: 42px; margin-bottom: 10px; }
-    main { padding: 50px 20px; }
-    .button {
-      display: inline-block;
-      background: #b9684c;
-      color: white;
-      padding: 15px 25px;
-      border-radius: 8px;
-      text-decoration: none;
-      margin-top: 20px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raíces Market | Different Roots. One Marketplace.</title>
+<style>
+:root {
+  --cream:#fffaf4;
+  --rose:#c98189;
+  --blush:#f7e5e3;
+  --green:#526b50;
+  --dark:#304530;
+}
+* { box-sizing:border-box; }
+body {
+  margin:0;
+  background:var(--cream);
+  color:var(--dark);
+  font-family:Georgia,serif;
+}
+.notice {
+  background:var(--green);
+  color:white;
+  text-align:center;
+  padding:12px;
+  font-size:12px;
+  letter-spacing:2px;
+}
+nav {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  padding:20px 7%;
+  gap:15px;
+}
+.brand {
+  font-size:27px;
+  font-weight:bold;
+}
+.brand span { color:var(--rose);font-style:italic; }
+nav a {
+  color:var(--dark);
+  text-decoration:none;
+  margin:0 9px;
+}
+.hero {
+  text-align:center;
+  padding:75px 20px;
+  background:linear-gradient(120deg,#fff5ec,#f5dcd9,#e7eee3);
+}
+.tree { font-size:64px; }
+h1 { font-size:clamp(42px,7vw,80px);margin:10px 0; }
+h1 em { color:var(--rose);font-weight:normal; }
+.tagline { letter-spacing:4px;font-size:14px; }
+.hero p { line-height:1.7; }
+.search {
+  display:flex;
+  max-width:650px;
+  margin:30px auto;
+  background:white;
+  border-radius:30px;
+  overflow:hidden;
+  border:1px solid #eadbd2;
+}
+.search input {
+  flex:1;
+  min-width:0;
+  border:0;
+  padding:18px;
+  font-size:15px;
+}
+button,.btn {
+  border:0;
+  background:var(--rose);
+  color:white;
+  padding:16px 26px;
+  cursor:pointer;
+  text-decoration:none;
+  display:inline-block;
+  border-radius:25px;
+}
+section { padding:50px 7%; }
+h2 { text-align:center;font-size:34px; }
+.sub { text-align:center;color:#796b63; }
+.categories {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(125px,1fr));
+  gap:18px;
+  text-align:center;
+  margin-top:35px;
+}
+.category {
+  background:#f8e9e6;
+  padding:25px 10px;
+  border-radius:20px;
+}
+.category .symbol { font-size:36px; }
+.category p { margin-bottom:0; }
+.banners {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+.banner {
+  background:var(--blush);
+  border-radius:20px;
+  padding:40px 25px;
+  text-align:center;
+}
+.banner:nth-child(2) { background:#e5ebdf; }
+.banner h2 { margin-top:0; }
+.products {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:22px;
+  margin-top:30px;
+}
+.product {
+  background:white;
+  border:1px solid #f0e6df;
+  border-radius:16px;
+  overflow:hidden;
+}
+.product img {
+  width:100%;
+  height:190px;
+  object-fit:cover;
+  display:block;
+}
+.product-info { padding:16px; }
+.product-info h3 { font-size:17px; }
+footer {
+  text-align:center;
+  background:var(--green);
+  color:white;
+  padding:35px;
+}
+@media(max-width:600px) {
+  nav { justify-content:center;text-align:center; }
+  .search button { padding:14px; }
+}
+</style>
 </head>
 <body>
-  <header>
-    <h1>🌳 Raíces Market</h1>
-    <p>Different Roots. One Marketplace.</p>
-  </header>
-  <main>
-    <h2>Welcome to Raíces Market</h2>
-    <p>A marketplace where everyone belongs.</p>
-    <p>Discover unique finds, handmade creations,
-       new treasures, and pre-loved favorites.</p>
-    <p>Shop small. Dream big. Grow together.</p>
-    <a class="button" href="#coming-soon">
-      Explore Our Marketplace
-    </a>
-    <p id="coming-soon">Coming Soon!</p>
-  </main>
+<div class="notice">
+  DIFFERENT ROOTS • ONE MARKETPLACE
+</div>
+
+<nav>
+  <div class="brand">🌳 Raíces <span>Market</span></div>
+  <div>
+    <a href="#categories">Shop</a>
+    <a href="#featured">Featured</a>
+    <a href="#sellers">Become a Seller</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="tree">🌳</div>
+  <h1>Raíces <em>Market</em></h1>
+  <div class="tagline">DIFFERENT ROOTS. ONE MARKETPLACE.</div>
+  <p>A welcoming marketplace for unique finds,<br>
+  handmade creations, and small businesses.</p>
+  <div class="search">
+    <input type="search" placeholder="Explore unique finds..." aria-label="Search products">
+    <button type="button" onclick="alert('Product search is coming soon!')">Search</button>
+  </div>
+  <a class="btn" href="#categories">Explore the Marketplace</a>
+</header>
+
+<section id="categories">
+  <h2>Shop by Category</h2>
+  <p class="sub">Find something special for every occasion.</p>
+  <div class="categories">
+    <div class="category"><div class="symbol">💍</div><p>Jewelry</p></div>
+    <div class="category"><div class="symbol">👗</div><p>Clothing</p></div>
+    <div class="category"><div class="symbol">👜</div><p>Accessories</p></div>
+    <div class="category"><div class="symbol">🏡</div><p>Home Décor</p></div>
+    <div class="category"><div class="symbol">🎁</div><p>Gifts</p></div>
+    <div class="category"><div class="symbol">🧴</div><p>Self Care</p></div>
+    <div class="category"><div class="symbol">🥤</div><p>Tumblers</p></div>
+    <div class="category"><div class="symbol">✨</div><p>Unique Finds</p></div>
+  </div>
+</section>
+
+<section class="banners">
+  <div class="banner">
+    <h2>Discover Unique Finds</h2>
+    <p>New treasures, pre-loved favorites, and handmade goods.</p>
+    <a class="btn" href="#featured">Shop Now</a>
+  </div>
+  <div class="banner" id="sellers">
+    <h2>Grow With Us</h2>
+    <p>Individuals and small businesses are welcome.</p>
+    <p>Seller registration will be free.</p>
+    <span class="btn">Seller Registration Coming Soon</span>
+  </div>
+</section>
+
+<section id="featured">
+  <h2>Featured Products</h2>
+  <p class="sub">A preview of the beautiful things you'll discover.</p>
+  <div class="products">
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=500" alt="Jewelry">
+      <div class="product-info"><h3>Beautiful Jewelry</h3><p>Sample product</p></div>
+    </article>
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?w=500" alt="Gift items">
+      <div class="product-info"><h3>Thoughtful Gifts</h3><p>Sample product</p></div>
+    </article>
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=500" alt="Home décor">
+      <div class="product-info"><h3>Home & Lifestyle</h3><p>Sample product</p></div>
+    </article>
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500" alt="Fashion accessories">
+      <div class="product-info"><h3>Fashion Accessories</h3><p>Sample product</p></div>
+    </article>
+  </div>
+</section>
+
+<footer>
+  <h2>🌳 Raíces Market</h2>
+  <p>Different Roots. One Marketplace.</p>
+  <p>Our marketplace is growing. Coming soon!</p>
+</footer>
 </body>
 </html>
