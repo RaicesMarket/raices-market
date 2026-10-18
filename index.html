@@ -62,8 +62,20 @@ nav a {
   text-align:center;
   padding:90px 20px;
   background:linear-gradient(120deg,#FFF8EC,#E5EEDB,#D4E5D5);
+  position:relative;
  
 }
+  
+.hero::before {
+  content:"🌸";
+  position:absolute;
+  left:3%;
+  top:15%;
+  font-size:32px;
+  opacity:0.45;
+  pointer-events:none;
+}
+
 .tree { font-size:64px; }
 h1 { font-size:clamp(42px,7vw,80px);margin:10px 0; }
 h1 em { color:var(--rose);font-weight:normal; }
